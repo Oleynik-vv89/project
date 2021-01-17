@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/laravel', function () {
     return view('welcome');
+});
+
+Route::get('/', function () {
+    return 'Hello my dear friend!';
+});
+
+Route::get('/info', function () {
+    return 'Information about the project';
+});
+
+Route::get('/news', function () {
+    return 'News';
 });
