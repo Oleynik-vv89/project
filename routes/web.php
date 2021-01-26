@@ -17,14 +17,14 @@ Route::get('/laravel', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return 'Hello my dear friend!';
-});
+Route::get('/info', [\App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('/info', function () {
-    return 'Information about the project';
-});
+Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'index']);
 
-Route::get('/news', function () {
-    return 'News';
-});
+Route::get('/category/{id}/news', [\App\Http\Controllers\NewsInCategoryController::class, 'index']);
+
+Route::get('/category/{id}/news/{name}', [\App\Http\Controllers\NewsController::class, 'index']);
+
+
+
+
