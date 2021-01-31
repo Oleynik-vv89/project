@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
      public function index()
     {
-        return 'Страница приветствия';
+        return view ('home', ['categoryList' => $this->categories], ['newsList' => $this->news]);
     }
 }

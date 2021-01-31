@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class NewsInCategoryController extends Controller
 {
-public function index($id)
+ public function index()
     {
-        return 'Страница вывода новостей по категории '.$id;
+        return view ('NewsInCategory', ['categoryList' => $this->categories], ['news' => $this->news]);
     }
 
 }
