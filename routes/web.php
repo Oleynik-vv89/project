@@ -17,6 +17,7 @@ Route::get('/laravel', function () {
     return view('welcome');
 });
 
+
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category');

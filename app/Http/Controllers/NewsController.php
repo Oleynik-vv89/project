@@ -9,6 +9,7 @@ class NewsController extends Controller
    public function index()
     {
         return view ('News', ['categoryList' => $this->categories], ['news' => $this->news]);
+
     }
 
 }

@@ -12,5 +12,3 @@ class NewsInCategoryController extends Controller
     }
 
 }
-
-
